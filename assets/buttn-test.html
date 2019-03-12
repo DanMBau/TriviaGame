@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>radio button test</title>
+
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+</head>
+
+<body>
+    <h3>
+        <input type="radio" id="button1" name="answer" value="answer1">answer1 <br>
+        <input type="radio" id="button2" name="answer" value="answer2">answer2 <br>
+        <input type="radio" id="button3" name="answer" value="answer3">answer3 <br>
+        <input type="radio" id="button4" name="answer" value="answer4">answer4 <br>
+    </h3>
+
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        var $radios = $('input[type="radio"]');
+        
+        $radios.change(function(){
+        var $filtered = $radios.filter(':checked')
+            
+     console.dir($filtered.val())   
+    })
+
+    })
+
+</script>
+
+
+</html>
