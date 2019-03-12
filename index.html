@@ -19,7 +19,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div class="jumbotron text-center">
+                <div class="text-center">
                     <h1>Trivia Game
                     </h1>
                     <div id="intro">Press the button to start the game!</div>
@@ -44,7 +44,7 @@
         </div>
     </div>
 
-    <div class="container text-center" id="game">
+    <div class="container text-center border rounded-pill shadow-lg p-3" id="game">
         <!--         QUESTIONS          -->
         <div class="row">
             <div class="col-md-7">
@@ -53,9 +53,13 @@
                 <button type="button" id="stopButton" class="btn btn-outline-secondary btn p-3 ">Done!</button>
             </div>
             <div class="col-md-5">
-                <h4><div class="correctA"><span>Correct answers:</span></div></h4>
-                <h4><div class="incorrectA"><span>Incorrect Answers:</span></div></h4>
-                <button type="button" id="startOverButton" class="btn btn-outline-secondary btn p-3 ">try again</button>
+                <h4><span>Correct answers:</span>
+                    <div class="correctA"></div>
+                </h4>
+                <h4><span>Incorrect Answers:</span>
+                    <div class="incorrectA"></div>
+                </h4>
+                <button type="button" id="startOverButton" class="btn btn-outline-secondary btn p-3 rounded-7">try again</button>
             </div>
         </div>
     </div>

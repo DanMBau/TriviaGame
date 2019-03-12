@@ -31,14 +31,14 @@ $(document).ready(function () {
         },
         {
 
-            question: "What's the weather like",
-            choices: ["cold", "don't know", "hot", "zzzzz"],
+            question: "Which nail grows fastest? ",
+            choices: ["Middle", "Pinky", "Thumb", "Ring"],
             correct: "answer0",
         },
         {
 
-            question: "How about this game",
-            choices: ["don't know", "how about it?", "Cheesecake", "how dare you?!"],
+            question: "Which is the only mammal that can’t jump?",
+            choices: ["Cow", "Giraffe", "Rattlesnake", "Elephant"],
             correct: "answer3",
         },
     ];
@@ -161,9 +161,10 @@ $(document).ready(function () {
         $(".correctA").show();
         $(".incorrectA").show();
         $("#stopButton").hide();
+        $("span").show();
 
-        $('.correctA').append(correctAnswers);
-        $('.incorrectA').append(incorrectAnswers);
+        $('.correctA').text(correctAnswers);
+        $('.incorrectA').text(incorrectAnswers);
 
 
 
@@ -171,14 +172,20 @@ $(document).ready(function () {
     $("#startOverButton").click(function () {
         $(".question").empty();
         $("#startOverButton").hide();
+        $("#stopButton").show();
+        $(".correctA").hide();
+        $(".incorrectA").hide();
+        $("span").hide();
 
         newGame();
     })
+
     $("#game").hide();
     $("#gameOn").hide();
     $("#startOverButton").hide();
     $(".correctA").hide();
     $(".incorrectA").hide();
+    $("span").hide();
 
 
     $("#startButton").click(function () {
