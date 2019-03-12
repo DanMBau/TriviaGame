@@ -44,14 +44,22 @@
         </div>
     </div>
 
-    <div class="text-center" id="game">
+    <div class="container text-center" id="game">
         <!--         QUESTIONS          -->
-        <div class="container" id="questions">
-            <div class="question"></div>
-            <!-- <div class="choices"></div> -->
+        <div class="row">
+            <div class="col-md-7">
+                <div class="question"></div>
+                <div class="choices"></div>
+                <button type="button" id="stopButton" class="btn btn-outline-secondary btn p-3 ">Done!</button>
+            </div>
+            <div class="col-md-5">
+                <h4><div class="correctA"><span>Correct answers:</span></div></h4>
+                <h4><div class="incorrectA"><span>Incorrect Answers:</span></div></h4>
+                <button type="button" id="startOverButton" class="btn btn-outline-secondary btn p-3 ">try again</button>
+            </div>
         </div>
-        <button type="button" id="stopButton" class="btn btn-outline-secondary btn p-3 ">Done!</button>
-        <button type="button" id="startOverButton" class="btn btn-outline-secondary btn p-3 ">try again</button>
+    </div>
+
 
     </div>
 

@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <h3>
+    <h3 class="display">
         <input type="radio" id="button1" name="answer" value="answer1">answer1 <br>
         <input type="radio" id="button2" name="answer" value="answer2">answer2 <br>
         <input type="radio" id="button3" name="answer" value="answer3">answer3 <br>
@@ -26,13 +26,18 @@
 <script>
     $(document).ready(function () {
         var $radios = $('input[type="radio"]');
-        
-        $radios.change(function(){
-        var $filtered = $radios.filter(':checked')
-            
-     console.dir($filtered.val())   
-    })
 
+        $radios.change(function () {
+            var $filtered = $radios.filter(':checked')
+
+            console.dir($filtered.val())
+
+
+
+        })
+        var newDiv =
+            $(`<div>some div</div>`)
+        $(".display").append(newDiv)
     })
 
 </script>

@@ -61,7 +61,7 @@ $(document).ready(function () {
                 value="answer3"><span>${triviaQuestions[i].choices[3]}</span>
             
             `)
-            $('.question').append(quest);
+            $('#questions').append(quest);
         }
     }
 
@@ -110,66 +110,29 @@ $(document).ready(function () {
     function gameOver() {
 
 
-        var res0 = document.querySelector('input[name="group0"]:checked').value;
-
-        var correct0 = [triviaQuestions[0].correct].toString()
-
-        if (res0 === correct0) {
+        var res1 = document.querySelector('input[name="group0"]:checked').value;
+        console.log(res1)
+        var res2 = document.querySelector('input[name="group1"]:checked').value;
+        console.log(res2)
+        var res3 = document.querySelector('input[name="group2"]:checked').value;
+        console.log(res3)
+        var res4 = document.querySelector('input[name="group3"]:checked').value;
+        console.log(res4)
+        if (res1 === [triviaQuestions[0].correct[0]]) {
             correctAnswers++
         }
-        else incorrectAnswers++;
-
-
-        var res1 = document.querySelector('input[name="group1"]:checked').value;
-        var correct1 = [triviaQuestions[1].correct].toString()
-
-        if (res1 === correct1) {
-            correctAnswers++
-        }
-        else incorrectAnswers++;
-
-        var res2 = document.querySelector('input[name="group2"]:checked').value;
-        var correct2 = [triviaQuestions[2].correct].toString()
-
-        if (res2 === correct2) {
-            correctAnswers++
-        }
-        else incorrectAnswers++;
-
-
-        var res3 = document.querySelector('input[name="group3"]:checked').value;
-        var correct3 = [triviaQuestions[3].correct].toString()
-
-        if (res3 === correct3) {
-            correctAnswers++
-        }
-        else incorrectAnswers++;
-
-
-
-
-        console.log(res0)
-
-
-
-
-        console.log('correct ' + correctAnswers)
-        console.log('false ' + incorrectAnswers)
+        else incorrectAnswers++
+        console.log(correctAnswers)
+        console.log(incorrectAnswers)
 
 
         $("#startOverButton").show();
-        $(".correctA").show();
-        $(".incorrectA").show();
-        $("#stopButton").hide();
-
-        $('.correctA').append(correctAnswers);
-        $('.incorrectA').append(incorrectAnswers);
 
 
 
     }
     $("#startOverButton").click(function () {
-        $(".question").empty();
+        $("#questions").empty();
         $("#startOverButton").hide();
 
         newGame();
@@ -177,9 +140,6 @@ $(document).ready(function () {
     $("#game").hide();
     $("#gameOn").hide();
     $("#startOverButton").hide();
-    $(".correctA").hide();
-    $(".incorrectA").hide();
-
 
     $("#startButton").click(function () {
         $("#startButton").hide();
